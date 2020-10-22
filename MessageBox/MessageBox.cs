@@ -49,8 +49,8 @@ namespace MessageBox
         public void Show(Type type, string message, string head = "", Position position = Position.topRight)
         {
             if (head == null || head == "") { head = Heading(type); }
-            Literal.Text = "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css'/><script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js'></script>"
-            + "<script>toastr['" + type + "']('" + message + "','" + head + "',{debug:false,escapeHtml:" + BoleanToString(EscapeHtml) + ",progressBar:" + BoleanToString(ProcessBar) + ",closeButton:" + BoleanToString(CloseButton) + ",timeOut:" + Timeout + ",extendedTimeOut:" + ExtendTimeout + ",positionClass:'" + Positioning(position) + "'});</script>";
+            Literal.Text = "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css'/>\n<script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js'></script>\n<script src=<'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' integrity='sha512 -bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==' crossorigin ='anonymous' ></script>"
+            + "<script>\ntoastr['" + type + "']('" + message + "','" + head + "',{debug:false,escapeHtml:" + BoleanToString(EscapeHtml) + ",progressBar:" + BoleanToString(ProcessBar) + ",closeButton:" + BoleanToString(CloseButton) + ",timeOut:" + Timeout + ",extendedTimeOut:" + ExtendTimeout + ",positionClass:'" + Positioning(position) + "'});\n</script>";
         }
     }
 }
