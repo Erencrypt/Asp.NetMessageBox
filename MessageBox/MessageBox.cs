@@ -43,14 +43,14 @@ namespace MessageBox
         string BoleanToString(bool bolean)
         { string ret = ""; if (bolean == true) { ret = "true"; } else if (bolean == false) { ret = "false"; } return ret; }
 
-        public void Settings(Language lang=Language.english, Literal literal = null, int timeout = 6000, int extendtimeout = 2000, bool escapehtml = true, bool processbar = true, bool closebutton = true)
+        public void Settings(Literal literal = null,Language lang=Language.english, int timeout = 6000, int extendtimeout = 2000, bool escapehtml = true, bool processbar = true, bool closebutton = true)
         { if (literal != null) {Literal = literal; } lng = lang; Timeout = timeout; ExtendTimeout = extendtimeout; EscapeHtml = escapehtml; ProcessBar = processbar; CloseButton = closebutton; }
 
         public void Show(Type type, string message, string head = "", Position position = Position.topRight)
         {
             if (head == null || head == "") { head = Heading(type); }
-            Literal.Text = "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css'/><script src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js'></script><script src=<'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' integrity='sha512 -bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==' crossorigin ='anonymous' ></script>"
-            + "<script>toastr['" + type + "']('" + message + "','" + head + "',{debug:false,escapeHtml:" + BoleanToString(EscapeHtml) + ",progressBar:" + BoleanToString(ProcessBar) + ",closeButton:" + BoleanToString(CloseButton) + ",timeOut:" + Timeout + ",extendedTimeOut:" + ExtendTimeout + ",positionClass:'" + Positioning(position) + "'});</script>";
+            Literal.Text = "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js \"></script>\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css \"/>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js \"></script>\n"
+            + "<script>\ntoastr[\"" + type + "\"](\"" + message + "\",\"" + head + "\",{debug:false,escapeHtml:" + BoleanToString(EscapeHtml) + ",progressBar:" + BoleanToString(ProcessBar) + ",closeButton:" + BoleanToString(CloseButton) + ",timeOut:" + Timeout + ",extendedTimeOut:" + ExtendTimeout + ",positionClass:\"" + Positioning(position) + "\"});\n</script>";
         }
     }
 }
