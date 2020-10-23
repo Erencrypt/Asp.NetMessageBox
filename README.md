@@ -9,11 +9,11 @@ This is a useful and simple class for using toastr notifications in **asp.net**.
  1. download **MessageBox.dll** file.
 https://github.com/ErenCanUtku/Asp.NetMessageBox/releases/tag/Version1.0
  2. extract **.dll** file from **.zip** archive.
- 3. open **"solution explorer"** and right click on **"referances"**.
- 4. click **"add referance"** button from top of the list.
- 5. click **"Browse"** button from bottom of the new opened window.
- 6. choose the **MessageBox.dll** file.
- 7. be sure checked little box on the left of dll file name and click **"ok"** button.
+ 3.	open **"solution explorer"** and right click on **"referances"**.
+ 4.	click **"add referance"** button from top of the list.
+ 5.	click **"Browse"** button from bottom of the new opened window.
+ 6.	choose the **MessageBox.dll** file.
+ 7.	be sure checked little box on the left of dll file name and click **"ok"** button.
  
 **It's done**, now you can use it but before, **don't forget** to check out our **"How to use"** guide **:D**. 
 
@@ -34,13 +34,13 @@ Firs we must create **"settings"** for **"literal"** who used in our **.aspx** f
 
 In **"settings"** method, we must set literal, all other parameters has default value, if you want to change any value  you can set;
 
-**1.** language (for now, only english and turkish available) (**default:** english)
+1. language (for now, only english and turkish available) (**default:** english)
 I'm put language option for "headers default value".
-**2.** timeout 
-**3.** extended timeout
-**4.** escape html
-**5.** process bar
-**6.** close button
+2. timeout 
+3. extended timeout
+4. escape html
+5. process bar
+6. close button
  
 if you chance only one of this you can use like this:
 
@@ -58,10 +58,10 @@ if you chance only one of this you can use like this:
     MessageBox.Show(Message.Type.info, "This is test message.", "Test");
 in **"show"** method  we have 4 parameters
 
-**1.** type
-**2.** message
-**3.** head
-**4.** position
+1.  type
+2. message
+3. head
+4. position
 
 **Type:** this parameter chance type of message, for example:
 
