@@ -85,7 +85,7 @@ in **"show"** method  we have 4 parameters
  - bottom full width
 
 # Example Project:
-More detailed version of example project is available in source code and release page.
+More detailed version of example project is available in release page.
 >**WebForm1.aspx.cs:**
 
     using System;
