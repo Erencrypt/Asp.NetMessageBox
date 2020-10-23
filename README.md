@@ -6,8 +6,7 @@ This is a useful and simple class for using toastr notifications in **asp.net**.
 
 **It's very simple.**
 
- **1.** download **MessageBox.dll** file.
-https://github.com/ErenCanUtku/Asp.NetMessageBox/releases/tag/Version1.0
+ **1.** download **MessageBox.dll** file(https://github.com/ErenCanUtku/Asp.NetMessageBox/releases/tag/Version1.0).
  **2.**	extract **.dll** file from **.zip** archive.
  **3.**	open **"solution explorer"** and right click on **"referances"**.
  **4.**	click **"add referance"** button from top of the list.
